@@ -1,0 +1,2020 @@
+/* Main styling(structure)*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
+    /*outline: 1px solid red*/;
+
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #0D0D0D; /* Main background */
+  color: #FFFFFF;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+/* Header */
+header {
+  background-color: #1E1E1E;
+  position: relative;
+  z-index: 1; /* Ensure the header is above other content */
+  box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.6); /* Inner shadow for depth */
+  padding: 15px;
+  text-align: center;
+}
+
+header h1 {
+  position: absolute;
+  text-align: left;
+  color: #FFFFFF;
+  margin-top: 100px;
+  z-index: 2; /* Ensure the title is above content */
+}
+
+/* Navigation */
+nav {
+  display: flex;
+  justify-content: center;
+  position: relative; /* Ensures the navigation is positioned properly */
+  z-index: 2; /* Keeps the nav above other content */
+  margin-top: -300px; /* Adjusted margin for better spacing */
+  height: 80px;
+  background-color: #444444; /* Background color for nav */
+  border-radius: 5px; /* Slight roundness for the edges */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
+  padding: 5px;
+}
+
+nav a {
+  color: #00E0FF;
+  padding: 15px 25px;
+  text-decoration: none;
+    transition: color 0.3s ease, background-color 0.3s ease;
+  transform: translateY(10px);
+  border-left: 2px solid rgba(255, 255, 255, 0.3); /* Divider */
+}
+
+nav a:first-child {
+  border-left: none; /* Remove border from the first item */
+}
+
+nav a:hover {
+  color: #FF9100;
+  background-color: #333333; /* Adding a hover background to make it more interactive */
+  border-radius: 5px; /* Same round edges effect */
+}
+
+/* Section */
+section {
+  padding: 50px;
+  text-align: center;
+}
+
+.container {
+  max-width: 800px;
+  margin: auto;
+  margin-top: 50px;
+  text-align: right;
+  margin-right: 5px;
+  overflow: hidden;
+}
+
+.container p {
+  margin-right: -10px;
+}
+
+/* Footer */
+footer {
+  background: #222;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: 20px;
+}
+
+/* Header Text Animation */
+.center-text {
+  position: absolute;
+  left: 40%;
+  top: 11%;
+  transform: translate(-50%, -50%);
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+  opacity: 1;
+  z-index: 1;
+  max-width: 300px; /* Limits the width so it wraps */
+  text-align: center; /* Centers the text */
+  word-wrap: break-word; /* Ensures long words wrap */
+}
+
+/* Social icons */
+.social-icons {
+  text-align: right;
+  position: absolute;
+  z-index: 2;
+  right: 0;
+  transform: translateX(-50px);
+}
+
+
+.social-icons a {
+  color: #00E0FF;
+}
+
+.social-icons a:hover {
+  color: #FF9100;
+}
+
+/*back-social icons*/
+.back-social{
+  position: fixed;
+  background-color:#1E1E1E;
+  border:3px solid #1E1E1E;
+  width: 80px;
+  height:10px;
+  transform: translateX( 783px)
+  translateY(5px);
+}
+
+/* About Section */
+
+
+
+#about {
+  background-color: #1E1E1E;
+  color: #FFFFFF;
+  padding: 40px;
+  margin: 40px auto;
+  border: 2px solid #444444;
+  border-radius: 15px;
+  width: 90%;
+  max-width: 1200px;
+  box-sizing: border-box;
+  overflow: hidden;
+  position: relative;
+  transform: translateY(250px);
+}
+
+/* Section Title */
+.section-title {
+  font-size: 48px; /* Big and bold */
+  font-weight: 700;
+  text-align: center;
+  margin: 40px 0 20px; /* Space above and below */
+  text-shadow: 0 0 3px rgba(255, 255, 255, 0.3); /* Subtle glow */
+  position: relative;
+  background-color: #FFFFFF;
+ -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  border-bottom: 3px solid transparent;
+  text-shadow: 
+    3px 3px 0px rgba(0, 0, 0, 0.3), 
+    6px 6px 0px rgba(0, 0, 0, 0.2), 
+    9px 9px 0px rgba(0, 0, 0, 0.1), 
+    0 0 5px rgba(0, 224, 255, 0.5), /* Subtle neon glow on edges */
+    0 0 10px rgba(0, 224, 255, 0.3), 
+    0 0 15px rgba(0, 224, 255, 0.2); /* Soft glow */
+}
+
+/* Optional: Circuit underline effect */
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 40%;
+  transform: translateX(-50px);
+  width: 150px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #00E0FF, transparent);
+  animation: neon-underline 0.6s ease-out forwards;
+}
+
+
+
+
+/* Container for flex layout */
+.about-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  position: relative;
+}
+
+/* Circuit Traces */
+.about-container::before,
+.about-container::after {
+  content: '';
+  position: absolute;
+  border: 1px solid #E0E0E0;
+  box-shadow: 0 0 5px rgba(224, 224, 224, 0.3);
+}
+
+.about-container::before {
+  top: 10%;
+  left: 0;
+  width: 80%;
+  height: 0;
+  border-bottom: none;
+  border-left: none;
+  border-radius: 0 5px 5px 0;
+  transform-origin: left;
+  animation: traceGrow 1s ease-in-out infinite alternate;
+}
+
+.about-container::after {
+  bottom: 10%;
+  left: 0;
+  width: 70%;
+  height: 0;
+  border-top: none;
+  border-left: none;
+  border-radius: 0 5px 5px 0;
+  transform-origin: left;
+  animation: traceGrow 1s ease-in-out infinite alternate-reverse;
+}
+
+@keyframes traceGrow {
+  0% { width: 50%; opacity: 0.7; }
+  100% { width: 80%; opacity: 1; }
+}
+
+/* Image on the left */
+.about-image {
+  flex: 1;
+  max-width: 300px;
+  min-width: 200px;
+  position: relative;
+  z-index: 1;
+}
+
+.about-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  border: 1px solid #444444;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3), 0 0 8px rgba(224, 224, 224, 0.2);
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.about-image:hover img {
+  transform: scale(1.05);
+}
+
+/* Content on the right */
+.about-content {
+  flex: 2;
+  text-align: left;
+  max-width: 600px;
+  position: relative;
+  z-index: 1;
+  padding: 20px;
+  background: rgba(30, 30, 30, 0.8);
+  border-radius: 10px;
+  box-shadow: inset 0 0 5px rgba(224, 224, 224, 0.1);
+}
+
+.about-content h2 {
+  color: #FFFFFF;
+  font-size: 32px;
+  margin-bottom: 15px;
+  font-weight: 700;
+  text-shadow: 0 0 2px rgba(255, 255, 255, 0.3);
+  line-height: 1.2;
+}
+
+.about-content p {
+  color: #E0E0E0;
+  font-size: 16px;
+  line-height: 1.8;
+  margin-bottom: 25px;
+  font-weight: 400;
+  text-align: justify;
+}
+
+/* Buttons */
+.about-buttons {
+  display: flex;
+  gap: 20px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  font-size: 16px;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+/* Primary Button: Read More */
+.read-more {
+  background-color: #00E0FF; /* Neon Blue */
+  color: #1E1E1E; /* Dark text for contrast */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2), 0 0 8px rgba(0, 224, 255, 0.4); /* Glow */
+}
+
+.read-more:hover {
+  background-color:#D4AF37; /* Slightly darker Neon Blue */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3), 0 0 12px rgba(0, 224, 255, 0.6);
+  transform: translateY(-2px);
+}
+
+/* Secondary Button: Download CV */
+.download-cv {
+  background-color: #333333; /* Medium Gray */
+  color: #FFFFFF; /* White text */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.download-cv:hover {
+  background-color: #4D4D4D; /* Lighter gray */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  #about {
+    padding: 30px;
+    width: 95%;
+  }
+
+  .about-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .about-container::before,
+  .about-container::after {
+    width: 60%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .about-image {
+    max-width: 250px;
+    margin-bottom: 20px;
+  }
+
+  .about-content {
+    text-align: center;
+    max-width: none;
+    padding: 15px;
+  }
+
+  .about-content p {
+    text-align: center;
+  }
+
+  .about-buttons {
+    justify-content: center;
+  }
+}
+
+/* Section Services */
+#services {
+  border: 3px solid #444444;
+  margin-top: 290px;
+  background-color: #1E1E1E;
+  color: #F5F5F5;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 20px;
+  perspective: 1000px; /* 3D depth */
+}
+
+/* Container */
+#services .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+/* Headings */
+#services h2, #services h3 {
+  color: #F5F5F5;
+  text-align: left;
+  margin-left: -8px;
+}
+
+/* Paragraphs */
+#services p, .services-p {
+  color: #E0E0E0;
+  text-align: left;
+  margin: 0 10px 0 0;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  max-width: 100%;
+  line-height: 1.6;
+}
+
+/* Service List (Grid Layout) */
+#services .service-list {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+/* Service Items */
+#services .service-item {
+    background-color: #2E2E2E;
+    border-radius: 15px;
+    padding: 25px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3),
+                inset 0 5px 10px rgba(255, 255, 255, 0.1);
+    transform-style: preserve-3d;
+    max-width: 300px;
+    height: auto;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    perspective: 1000px;
+    position: relative; /* For the light effect positioning */
+}
+
+
+
+#services .service-item .service-icon {
+    font-size: 40px;
+    color: #00E0FF;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 5px rgba(0, 224, 255, 0.4);
+}
+
+
+#services .service-item .divider {
+    width: 80%;
+    height: 2px;
+    background-color: rgba(255, 255, 255, 0.2);
+    margin: 10px 0;
+}
+
+
+
+/* Hover Effects */
+#services .service-item:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5),
+                inset 0 6px 12px rgba(255, 255, 255, 0.1);
+}
+
+
+
+/* Service Item Text */
+#services .service-item h3 {
+    color: #F5F5F5;
+    font-size: 18px;
+    margin-bottom: 10px;
+    text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.2);
+}
+
+
+
+#services .service-item p {
+    color: #E0E0E0;
+    font-size: 16px;
+    line-height: 1.6;
+    text-align: left;
+}
+
+#services .service-item:nth-child(1)::before {
+    content: "";
+    position: absolute;
+    top: -30px;
+    left: -30px;
+    width: 80px;
+    height: 80px;
+    background: #00E0FF; /* Neon blue */
+    border-radius: 50%;
+    filter: blur(20px);
+    transform: rotate(45deg);
+}
+
+#services .service-item:nth-child(2)::before {
+    content: "";
+    position: absolute;
+    top: 20px;
+    left: -40px;
+    width: 60px;
+    height: 60px;
+    background: #A855F7; /* Neon purple */
+    border-radius: 50%;
+    filter: blur(25px);
+    transform: rotate(30deg);
+}
+
+#services .service-item:nth-child(3)::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    right: -40px;
+    width: 70px;
+    height: 70px;
+    background: #00E0FF; /* Neon blue */
+    border-radius: 50%;
+    filter: blur(15px);
+    transform: rotate(60deg);
+}
+
+#services .service-item:nth-child(4)::before {
+    content: "";
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    width: 90px;
+    height: 90px;
+    background: #A855F7; /* Neon purple */
+    border-radius: 50%;
+    filter: blur(30px);
+    transform: rotate(90deg);
+}
+
+#services .service-item:hover::before {
+    transform: scale(1.2);
+    filter: blur(35px);
+}
+
+
+
+/* Links */
+#services a {
+  color: #4CA1AF;
+  text-decoration: none;
+}
+
+#services a:hover {
+  color: #FFFFFF;
+}
+
+/* Animated Header */
+#services h2 {
+  color: #F5F5F5;
+  font-size: 28px;
+  font-weight: bold;
+  text-transform: uppercase;
+  position: relative;
+  padding: 10px;
+  display: inline-block;
+  background-color: #FFFFFF;
+ -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  border-bottom: 3px solid transparent;
+  text-shadow: 
+    3px 3px 0px rgba(0, 0, 0, 0.3), 
+    6px 6px 0px rgba(0, 0, 0, 0.2), 
+    9px 9px 0px rgba(0, 0, 0, 0.1), 
+    0 0 5px rgba(0, 224, 255, 0.5), /* Subtle neon glow on edges */
+    0 0 10px rgba(0, 224, 255, 0.3), 
+    0 0 15px rgba(0, 224, 255, 0.2); /* Soft glow */
+}
+
+#services h2::after {
+  content: "";
+  position: absolute;
+  left: 20%;
+  bottom: -5px;
+  width: 60%;
+  height: 4px;
+  background: linear-gradient(90deg, transparent, #00E0FF, transparent);
+  transform: translateX(-50%);
+  animation: neon-underline 0.6s ease-out forwards;
+}
+
+/* Neon underline animation */
+@keyframes neon-underline {
+  0% { transform: scaleX(0); opacity: 0; }
+  50% { transform: scaleX(1.2); opacity: 0.8; }
+  100% { transform: scaleX(1); opacity: 1; }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  #services .service-list {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+
+  #services .service-item {
+    max-width: 250px;
+    height: auto;
+  }
+
+  #services .service-item p {
+    white-space: normal;
+    text-align: left;
+  }
+}
+
+ .services-desc {
+  font-size: 20px;
+  font-weight: bold;
+  color: #E0E0E0;
+  text-align: center;
+  margin-bottom: 20px;
+  text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5); /* Soft 3D shadow effect */
+  letter-spacing: 1px; /* Slight spacing for better readability */
+  transform: translateZ(10px); /* Slight depth effect */
+}
+
+/*header-dividers*/
+.divider-container {
+  position: relative;
+  width: 100%;
+  height: 60px; /* Match the header height */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  pointer-events: none; /* So it doesn't block interactions */
+}
+
+.divider-left,
+.divider-right {
+  width: 2px;
+  height: 195px; /* Full height */
+  background-color: #444444;
+  z-index: 1;
+}
+
+.divider-left{
+  transform: translateY(-4790px)
+  translateX(180px);
+}
+
+.divider-right{
+  position: relative;
+  transform: translateY(-4790px)
+  translateX(-375px);
+}
+
+/* Carousel Section Styles */
+#notable-projects {
+  padding: 60px 20px;
+  text-align: center;
+  background-color: #2a2a2a;  /* Darker background for a more elegant look */
+  color: #F5F5F5; /* Lighter text for contrast */
+  transform: translateY(245px); /* Keeps position consistent */
+}
+
+#notable-projects h2 {
+  color: #F5F5F5;
+  font-size: 28px;
+  font-weight: bold;
+  text-transform: uppercase;
+  position: relative;
+  padding: 10px;
+  display: inline-block;
+  background-color: #FFFFFF;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  border-bottom: 3px solid transparent;
+  text-shadow: 
+    3px 3px 0px rgba(0, 0, 0, 0.3), 
+    6px 6px 0px rgba(0, 0, 0, 0.2), 
+    9px 9px 0px rgba(0, 0, 0, 0.1), 
+    0 0 5px rgba(0, 224, 255, 0.5), /* Subtle neon glow on edges */
+    0 0 10px rgba(0, 224, 255, 0.3), 
+    0 0 15px rgba(0, 224, 255, 0.2); /* Soft glow */
+}
+
+#notable-projects h2::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(to right, 
+    rgba(100, 100, 100, 0.2) 0%,  /* Faded grey (left) */
+    rgba(0, 224, 255, 1) 50%,     /* Bright neon blue (center) */
+    rgba(100, 100, 100, 0.2) 100% /* Faded grey (right) */
+  );
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  animation: neon-underline 0.6s ease-out forwards;
+  z-index: 2;
+}
+
+@keyframes neon-underline {
+  to {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+}
+/* Carousel container */
+.carousel-container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  border-radius: 10px; /* Smooth corners for a modern touch */
+}
+
+/* Carousel items */
+.carousel {
+  display: flex;
+  transition: transform 0.3s ease-in-out;
+}
+
+.carousel-item {
+  display: flex;
+  flex-direction: row; /* Keeps image left, text right */
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: #333;
+  border-radius: 8px;
+  overflow: hidden; /* Ensures content stays inside */
+  gap: 20px; /* Adds spacing between image and text */
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease; /* Added for hover */
+  cursor: pointer;
+}
+
+.carousel-item:hover {
+  transform: scale(1.02); /* Slight scale-up */
+  box-shadow: 0 0 15px rgba(0, 224, 255, 0.5); /* Neon Blue glow */
+  background-color: #3a3a3a; /* Slightly lighter background */
+}
+
+/* Image Styling */
+.carousel-item img {
+  max-width: 180px; /* Small, balanced size */
+  height: auto;
+  border-radius: 8px;
+  flex-shrink: 0; /* Prevents it from shrinking */
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Text Content Box */
+.carousel-item-content {
+  flex: 1; /* Takes up remaining space */
+  text-align: left;
+  max-width: 100%; /* Keeps text inside the carousel */
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  padding: 10px; /* Adds spacing inside the text box */
+}
+
+/* Text Styling */
+.carousel-item h3 {
+  font-size: 20px;
+  margin-bottom: 8px;
+  color: #00E0FF;
+}
+
+.carousel-item p {
+  font-size: 14px;
+  color: #B0B0B0;
+  line-height: 1.6;
+  word-break: break-word; /* Ensures long words don't break layout */
+  max-width: 100%; /* Keeps text inside */
+}
+/* Navigation arrows */
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  border: none;
+  padding: 20px; /* Increased padding for bigger circle */
+  font-size: 40px; /* Increased font size for bigger arrows */
+  cursor: pointer;
+  z-index: 10;
+  border-radius: 50%;  /* Full circle shape */
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  width: 60px; /* Set width to create a full circle */
+  height: 60px; /* Set height to match the width for a perfect circle */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Position the arrows on the left and right */
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+/* Hover effect for arrows */
+.prev:hover, .next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+  transform: scale(1.1);  /* Slightly increase the size on hover */
+}
+
+/* Active arrow state */
+.prev:active, .next:active {
+  background-color: rgba(0, 0, 0, 1);
+  transform: scale(1.05);
+}
+
+/* Optional: Custom styling for carousel container */
+.carousel-container {
+  padding: 20px 0;  /* Adds vertical padding for spacing */
+  border-top: 2px solid #444; /* Divider above carousel */
+  border-bottom: 2px solid #444; /* Divider below carousel */
+}
+
+.carousel-item {
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+  transition: background-position 0.5s ease;
+}
+
+.carousel-item.active {
+  background-position: center;
+}
+
+/* For the images inside carousel items */
+.carousel-item img.carousel-img {
+  width: 50%;  /* Makes the image even smaller */
+  height: auto; /* Maintains the aspect ratio */
+  border-radius: 8px; /* Adds rounded corners */
+  margin-bottom: 15px; /* Adds space below the image */
+  object-fit: contain;  /* Ensures the image is contained within the box */
+  display: block; /* Ensures the image is block-level */
+  margin-left: auto;  /* Centers the image horizontally */
+  margin-right: auto;  /* Centers the image horizontally */
+}
+
+/* Optional: Adjust carousel item to fit the smaller image */
+.carousel-item {
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  transition: background-position 0.5s ease;
+  text-align: center;  /* Ensure text is centered */
+}
+
+/* Carousel item image styling */
+/* Carousel item styling */
+.carousel-item {
+  min-width: 100%;
+  box-sizing: border-box;
+  padding: 30px;
+  text-align: center;
+  background-color: #333;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;  /* Aligns content in the center */
+  align-items: center;  /* Aligns content vertically */
+  gap: 20px;  /* Adds space between image and text */
+}
+
+/* Image styling */
+.carousel-item img {
+  width: 200px;  /* You can adjust the width as needed */
+  height: auto;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out;
+}
+
+.carousel-item img:hover {
+  transform: scale(1.05);
+}
+
+/* Vertical Divider Styling */
+.carousel-item .carousel-divider {
+  width: 2px;  /* Thin divider */
+  height: 100px;  /* Height of the divider */
+  background-color: #00E0FF;  /* Color of the divider */
+  border-radius: 10px;  /* Optional: adds rounded corners to the divider */
+}
+
+/* Text styling */
+.carousel-item h3 {
+  font-size: 24px;
+  margin-bottom: 15px;
+  color: #00E0FF;
+}
+
+.carousel-item p {
+  font-size: 16px;
+  color: #E0E0E0;
+  line-height: 1.6;
+}
+
+/* Skills Section */
+#skills {
+  background-color: #1E1E1E;
+  color: #ffffff;
+  padding: 50px 20px;
+  text-align: center;
+  position: relative;
+  margin: 40px 0;
+}
+
+/* Centering the container */
+.skills-container {
+  max-width: 800px;
+  margin: auto;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Title Styling */
+#skills h2 {
+  color: #ffffff;
+  font-size: 36px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+/* Skills List - 3 Left, 3 Right */
+.skills-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 120px;
+  max-width: 800px;
+  margin: auto;
+  position: relative;
+  margin-top: 50px;
+  margin-bottom: 40px;
+  perspective: 1000px; /* Creates 3D space */
+}
+
+/* Skill Item */
+.skill-item {
+  background-color: #2E2E2E;
+  border-radius: 15px;
+  padding: 20px;
+  width: 85%;
+  max-width: 350px;
+  height: 160px;
+  margin: auto;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transform-style: preserve-3d; /* Enables 3D transforms */
+}
+
+/* Hover with 3D tilt */
+.skill-item:nth-child(1):hover {
+  transform: translateY(-60px) rotateX(5deg) rotateY(-5deg);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.4), 0 0 40px rgba(224, 224, 224, 0.2); /* Light gray glow */
+}
+
+
+.skill-item:nth-child(1):hover p {
+  text-shadow: 0 0 4px rgba(255, 255, 255, 0.6), 0 0 8px rgba(224, 224, 224, 0.4); /* White and gray glow */
+}
+
+.skill-item:nth-child(2):hover {
+  transform: translateY(-60px) rotateX(5deg) rotateY(5deg);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.4), 0 0 40px rgba(224, 224, 224, 0.2);
+}
+
+
+.skill-item:nth-child(2):hover p {
+  text-shadow: 0 0 4px rgba(255, 255, 255, 0.6), 0 0 8px rgba(224, 224, 224, 0.4);
+}
+
+.skill-item:nth-child(3):hover {
+  transform: translateY(-10px) rotateX(5deg) rotateY(-5deg);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.4), 0 0 40px rgba(224, 224, 224, 0.2);
+}
+
+
+.skill-item:nth-child(3):hover p {
+  text-shadow: 0 0 4px rgba(255, 255, 255, 0.6), 0 0 8px rgba(224, 224, 224, 0.4);
+}
+
+.skill-item:nth-child(4):hover {
+  transform: translateY(-10px) rotateX(5deg) rotateY(5deg);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.4), 0 0 40px rgba(224, 224, 224, 0.2);
+}
+
+
+.skill-item:nth-child(4):hover p {
+  text-shadow: 0 0 4px rgba(255, 255, 255, 0.6), 0 0 8px rgba(224, 224, 224, 0.4);
+}
+
+.skill-item:nth-child(5):hover {
+  transform: translateY(-10px) rotateX(5deg) rotateY(-5deg);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.4), 0 0 40px rgba(224, 224, 224, 0.2);
+}
+
+
+.skill-item:nth-child(5):hover p {
+  text-shadow: 0 0 4px rgba(255, 255, 255, 0.6), 0 0 8px rgba(224, 224, 224, 0.4);
+}
+
+.skill-item:nth-child(6):hover {
+  transform: translateY(-10px) rotateX(5deg) rotateY(5deg);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.4), 0 0 40px rgba(224, 224, 224, 0.2);
+}
+
+
+.skill-item:nth-child(6):hover p {
+  text-shadow: 0 0 4px rgba(255, 255, 255, 0.6), 0 0 8px rgba(224, 224, 224, 0.4);
+}
+
+/* Hover Effect */
+.skill-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Neon glow for each card */
+.skill-item:nth-child(1):hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3), 0 0 30px rgba(0, 224, 255, 0.2); /* Neon Blue */
+}
+
+.skill-item:nth-child(2):hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3), 0 0 30px rgba(168, 85, 247, 0.2); /* Neon Purple */
+}
+
+.skill-item:nth-child(3):hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3), 0 0 30px rgba(0, 224, 255, 0.2); /* Neon Blue */
+}
+
+.skill-item:nth-child(4):hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3), 0 0 30px rgba(168, 85, 247, 0.2); /* Neon Purple */
+}
+
+.skill-item:nth-child(5):hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3), 0 0 30px rgba(0, 224, 255, 0.2); /* Neon Blue */
+}
+
+.skill-item:nth-child(6):hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3), 0 0 30px rgba(168, 85, 247, 0.2); /* Neon Purple */
+}
+
+#skills h2 {
+  position: absolute;
+  top: 30%; /* Move it to the middle of skills */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #ffffff;
+  font-size: 36px;
+  text-align: center;
+  background-color: #FFFFFF;
+ -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  border-bottom: 3px solid transparent;
+  text-shadow: 
+    3px 3px 0px rgba(0, 0, 0, 0.3), 
+    6px 6px 0px rgba(0, 0, 0, 0.2), 
+    9px 9px 0px rgba(0, 0, 0, 0.1), 
+    0 0 5px rgba(0, 224, 255, 0.5), /* Subtle neon glow on edges */
+    0 0 10px rgba(0, 224, 255, 0.3), 
+    0 0 15px rgba(0, 224, 255, 0.2); /* Soft glow */
+  z-index: 2;
+}
+
+#skills h2::after {
+  content: "";
+  position: absolute;
+  left: 20%;
+  bottom: -5px;
+  width: 60%;
+  height: 4px;
+  background: linear-gradient(90deg, transparent, #00E0FF, transparent);
+  transform: translateX(-50%);
+  animation: neon-underline 0.6s ease-out forwards;
+}
+
+/* Neon underline animation */
+@keyframes neon-underline {
+  0% { transform: scaleX(0); opacity: 0; }
+  50% { transform: scaleX(1.2); opacity: 0.8; }
+  100% { transform: scaleX(1); opacity: 1; }
+}
+
+
+/* Skill Titles */
+.skill-item h3 {
+  color: #ffffff;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+/* Skill Descriptions */
+.skill-item p {
+  color: #E0E0E0; /* Secondary color: light gray */
+  line-height: 1.6;
+  transition: text-shadow 0.3s ease;
+}
+
+/* Battery Container */
+.battery-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; /* Stack battery and percentage */
+  width: 50px;
+  height: 120px;
+  margin: 10px auto;
+}
+
+/* Battery Box */
+.battery {
+  width: 50px;
+  height: 100px;
+  background-color: #444;
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+  border: 2px solid #ffffff;
+  display: flex;
+  align-items: flex-end;
+}
+
+/* Liquid Battery Fill */
+.liquid {
+  width: 100%;
+  height: 0%; /* Adjust percentage dynamically */
+  background: linear-gradient(to top, #00A8CC 0%, #00E0FF 50%, #80F1FF 100%);
+  position: absolute;
+  bottom: 0;
+  transition: height 1.5s ease-in-out;
+
+}
+
+/*liquid-anim*/
+liquid::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 8px; /* Small wave height */
+  background: rgba(255, 255, 255, 0.4); /* Shiny wave surface */
+  border-radius: 50% 50% 0 0;
+  transform: translateY(-50%);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.skill-item[data-percentage="70"]:hover .liquid {
+  height: 70%;
+}
+
+.skill-item[data-percentage="85"]:hover .liquid {
+  height: 85%;
+}
+
+/* Slow wave animation on hover */
+.skill-item:hover .liquid::before {
+  opacity: 1;
+  animation: gentleWave 3s infinite ease-in-out;
+}
+
+/* Keyframes for subtle top wave */
+@keyframes gentleWave {
+  0% { transform: translateY(-50%) translateX(0) scaleX(1); }
+  25% { transform: translateY(-60%) translateX(2px) scaleX(1.05); }
+  75% { transform: translateY(-60%) translateX(-2px) scaleX(1.05); }
+  100% { transform: translateY(-50%) translateX(0) scaleX(1); }
+}
+
+/* Shine effect */
+.skill-item .liquid::after {
+  content: '';
+  position: absolute;
+  top: 10%;
+  left: -50%;
+  width: 50%;
+  height: 20%;
+  background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.3), transparent);
+  transform: skewX(-20deg);
+}
+
+.skill-item:hover .liquid::after {
+  animation: shine 4s infinite linear;
+}
+
+@keyframes shine {
+  0% { left: -50%; }
+  100% { left: 150%; }
+}
+
+/* Percentage Text */
+.percentage {
+  margin-top: 5px;
+  color: #FFFFFF;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  transition: color 0.5s ease-in-out; /* Optional: smooth color change */
+}
+
+/* Optional: Dim when unhovered */
+.skill-item .percentage {
+  color: #B0B0B0; /* Faded when 0% */
+}
+
+.skill-item:hover .percentage {
+  color: #FFFFFF; /* Bright when showing real value */
+}
+
+
+
+@media (max-width: 768px) {
+  .skills-list {
+    grid-template-columns: 1fr; /* Switch to single column */
+  }
+
+  #skills h2 {
+    top: 40%; /* Adjust title position */
+  }
+}
+
+
+
+.skill-item:nth-child(4) h3{
+  transform: translateY(27px); /* Moves them up */
+}
+.skill-item:nth-child(4) p{
+  transform: translateY(10px);
+}
+.skill-item:nth-child(5) h3{
+  transform: translateY(20px);
+}
+.skill-item:nth-child(6) h3{
+  transform: translateY(20px); /* Moves them up */
+}
+
+/*fixing-1-2-my skills*/
+.skill-item:nth-child(1),
+.skill-item:nth-child(2) {
+  transform: translateY(-50px); /* Initial position */
+}
+
+.skill-item:nth-child(1):hover {
+  transform: translateY(-60px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 224, 255, 0.4); /* Neon Blue, 40% opacity */
+}
+
+.skill-item:nth-child(2):hover {
+  transform: translateY(-60px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3), 0 0 40px rgba(168, 85, 247, 0.4); /* Neon Purple, 40% opacity */
+}
+
+.skill-item:nth-child(3):hover {
+  transform: translateY(-60px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3), 0 0 40px rgba(168, 85, 247, 0.4); /* Neon Purple, 40% opacity */
+}
+
+.skill-item:nth-child(4):hover {
+  transform: translateY(-60px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 224, 255, 0.4); /* Neon Blue, 40% opacity */
+}
+
+.skill-item:nth-child(5):hover {
+  transform: translateY(-60px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 224, 255, 0.4); /* Neon Blue, 40% opacity */
+}
+
+.skill-item:nth-child(6):hover {
+  transform: translateY(-60px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 224, 255, 0.4); /* Neon Blue, 40% opacity */
+}
+
+/* Thunder Icon */
+.thunder-icon {
+  width: 20px;
+  height: 30px;
+  fill: #FFFFFF; /* White by default */
+  position: relative;
+  z-index: 2; /* Above liquid */
+  transition: opacity 0.3s ease, fill 0.3s ease;
+  filter: drop-shadow(0 0 2px rgba(255, 255, 255, 0.3)); /* Subtle glow */
+  transform: translateX(10px);
+}
+
+/* Fade icon slightly when liquid fills */
+.skill-item:hover .thunder-icon {
+  opacity: 0.7; /* Slightly faded when liquid rises */
+  fill: #00E0FF; /* Neon Blue on hover */
+}
+
+/* Why Choose Me Section */
+#choose {
+  background-color: #1E1E1E;
+  padding: 40px 20px;
+  margin: 40px 0;
+}
+
+/* Main Container */
+.why-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  text-align: center;
+  perspective: 1000px;
+}
+
+/* Title Container */
+.why-title-container {
+  margin-bottom: 60px;
+  text-align: right;
+  position: relative;
+  z-index: 3;
+}
+
+/* Why Choose Me Title */
+.why-title {
+  font-size: 48px;
+  font-weight: 700;
+  color: #FFFFFF;
+  background: linear-gradient(90deg, #FFFFFF, #E0E0E0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 
+    3px 3px 0px rgba(0, 0, 0, 0.3), 
+    6px 6px 0px rgba(0, 0, 0, 0.2), 
+    9px 9px 0px rgba(0, 0, 0, 0.1), 
+    0 0 5px rgba(0, 224, 255, 0.5), 
+    0 0 10px rgba(0, 224, 255, 0.3), 
+    0 0 15px rgba(0, 224, 255, 0.2);
+  position: relative;
+  display: inline-block;
+  transform: translateY(-30px);
+  z-index: 4;
+}
+
+/* Horizontal Underline (Top of L) */
+.why-container::before {
+  content: '';
+  position: absolute;
+  top: 20px;
+  left: 0;
+  width: 100%;
+  height: 6px;
+  background: #00E0FF;
+  box-shadow: 
+    0 2px 10px rgba(0, 224, 255, 0.5), 
+    0 4px 15px rgba(0, 224, 255, 0.3), 
+    0 6px 20px rgba(0, 224, 255, 0.2);
+  transform: rotateX(20deg);
+  transform-origin: top;
+  z-index: 2;
+}
+
+/* Vertical Line (Right side of L) */
+.why-container::after {
+  content: '';
+  position: absolute;
+  top: 20px;
+  right: 0;
+  width: 6px;
+  height: 100%;
+  background: #00E0FF;
+  box-shadow: 
+    -2px 0 10px rgba(0, 224, 255, 0.5), 
+    -4px 0 15px rgba(0, 224, 255, 0.3), 
+    -6px 0 20px rgba(0, 224, 255, 0.2);
+  transform: rotateY(-20deg);
+  transform-origin: right;
+  z-index: 2;
+}
+
+/* Card Grid */
+.why-choose-me {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 20px;
+  position: relative;
+  z-index: 1;
+  perspective: 800px;
+}
+
+/* Individual Card */
+.card {
+  position: relative;
+  background: #222;
+  padding: 40px 20px 20px;
+  border-radius: 10px;
+  text-align: center;
+  transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out, background 0.5s ease-in-out;
+  box-shadow: 
+    0 4px 10px rgba(0, 0, 0, 0.2), 
+    0 6px 15px rgba(0, 0, 0, 0.15);
+  min-height: 180px; /* Increased to fit title */
+  transform: rotateX(5deg) rotateY(5deg);
+  transform-style: preserve-3d;
+}
+
+/* Card Hover */
+.card:hover {
+  background: radial-gradient(circle at top, rgba(0, 224, 255, 0.2), #222);
+  box-shadow: 
+    0 10px 20px rgba(0, 0, 0, 0.3), 
+    0 15px 30px rgba(0, 224, 255, 0.2), 
+    0 20px 40px rgba(168, 85, 247, 0.2);
+  transform: translateZ(20px) rotateX(0deg) rotateY(0deg);
+}
+
+/* Card Title */
+.card-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #00E0FF; /* Neon Blue */
+  margin: 10px 0 5px; /* Space above text, below bulb */
+  text-shadow: 0 0 5px rgba(0, 224, 255, 0.5); /* Subtle glow */
+  position: relative;
+  z-index: 2;
+}
+
+/* Card Text */
+.card-text {
+  color: rgba(255, 255, 255, 0.2);
+  font-size: 16px;
+  line-height: 1.6;
+  margin: 0;
+  transition: color 0.5s ease-in-out;
+  position: relative;
+  z-index: 2;
+}
+
+/* Bulb Container */
+.bulb-container {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+}
+
+/* Bulb Icon */
+.bulb {
+  width: 40px;
+  height: 40px;
+  background: #444;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  color: rgba(255, 255, 255, 0.5);
+  transition: transform 0.3s ease-in-out, background 0.3s ease-in-out, color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  position: relative;
+  z-index: 3;
+}
+
+/* Hover Effects */
+.card:hover .bulb {
+  background: #A855F7; /* Neon Purple */
+  transform: translateY(-5px) scale(1.3);
+  color: #00E0FF; /* Neon Blue icon */
+  box-shadow: 0 0 20px #A855F7, 0 0 30px rgba(168, 85, 247, 0.8);
+}
+
+.card:hover .card-text {
+  color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .why-choose-me {
+    grid-template-columns: 1fr;
+    padding: 10px;
+  }
+
+  .card {
+    padding: 40px 15px 15px;
+    transform: rotateX(5deg) rotateY(0deg);
+    min-height: 200px; /* Adjusted for title */
+  }
+
+  .card:hover {
+    transform: translateZ(15px) rotateX(0deg) rotateY(0deg);
+  }
+
+  .why-title-container {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  .why-title {
+    font-size: 36px;
+    transform: translateY(-20px);
+  }
+
+  .why-container::before,
+  .why-container::after {
+    top: 10px;
+  }
+}
+
+/* Pre-Footer Section */
+.pre-footer {
+  background-color: #1E1E1E;
+  padding: 50px 0;
+}
+
+/* Main Container */
+.pre-container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+/* Stats Grid */
+.stats {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+/* Stat Card */
+.stat-card {
+  background-color: #1E1E1E;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding: 20px;
+  width: 30%;
+  transition: transform 0.3s, box-shadow 0.3s;
+  position: relative;
+}
+
+.stat-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Neon Blue Edge Lighting Effect */
+.blue-card {
+  box-shadow: 0 0 15px rgba(0, 224, 255, 0.6), 0 0 20px rgba(0, 224, 255, 0.4), inset 0 0 10px rgba(0, 224, 255, 0.3);
+}
+
+/* Neon Purple Edge Lighting Effect */
+.purple-card {
+  box-shadow: 0 0 15px rgba(168, 85, 247, 0.6), 0 0 20px rgba(168, 85, 247, 0.4), inset 0 0 10px rgba(168, 85, 247, 0.3);
+}
+
+/* Dual Neon Edge Lighting Effect - Blue and Purple */
+.dual-card {
+  box-shadow: 0 0 15px rgba(0, 224, 255, 0.6), 0 0 15px rgba(168, 85, 247, 0.6), inset 0 0 10px rgba(0, 224, 255, 0.3), inset 0 0 10px rgba(168, 85, 247, 0.3);
+}
+
+/* Stat Icon */
+.stat-icon {
+  font-size: 40px;
+  color: #fff;
+  margin-bottom: 15px;
+}
+
+/* Stat Content */
+.stat-content {
+  color: #fff;
+}
+
+.stat-content .number {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.stat-content .label {
+  font-size: 14px;
+  color: #E0E0E0;
+}
+
+/* Call to Action */
+.cta {
+  text-align: center;
+}
+
+.cta-text {
+  font-size: 48px;
+  color: #E0E0E0; /* Light gray for subtle contrast */
+  margin-bottom: 15px; /* Space between text and button */
+  font-weight: 400;
+  background-color: #FFFFFF;
+ -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  border-bottom: 3px solid transparent;
+  text-shadow: 
+    3px 3px 0px rgba(0, 0, 0, 0.3), 
+    6px 6px 0px rgba(0, 0, 0, 0.2), 
+    9px 9px 0px rgba(0, 0, 0, 0.1), 
+    0 0 5px rgba(0, 224, 255, 0.5), /* Subtle neon glow on edges */
+    0 0 10px rgba(0, 224, 255, 0.3), 
+    0 0 15px rgba(0, 224, 255, 0.2); /* Soft glow */
+}
+
+
+.cta-btn {
+  font-size: 18px;
+  padding: 12px 30px;
+  background: #333; /* Neon Green as you made it */
+  color: #ffffff; /* Dark text */
+  text-decoration: none;
+  border-radius: 4px;
+  display: inline-block;
+}
+
+.cta-btn:hover {
+  background-color: #555555; /* Slightly darker Neon Green */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3), 0 0 12px rgba(0, 255, 133, 0.6);
+  transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .stats {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .stat-card {
+    width: 80%;
+    margin-bottom: 20px;
+  }
+
+  .cta-text {
+    font-size: 16px;
+  }
+
+  .cta-btn {
+    font-size: 16px;
+    padding: 10px 25px;
+  }
+}
+
+
+/*footer*/
+/* Full Page Setup */
+html {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Full viewport height */
+  margin: 0;
+  padding: 0;
+}
+
+/* All content sections */
+#choose, .pre-footer {
+  flex: 0 0 auto; /* Don’t grow or shrink */
+}
+
+/* Footer */
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #1E1E1E;
+  color: #E0E0E0;
+  padding: 20px 0;
+  text-align: center;
+  box-shadow: 0 -2px 10px rgba(0, 224, 255, 0.3);
+  z-index: 1000;
+}
+
+/* Footer Container */
+.footer-container {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Footer Left */
+.footer-left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 50%;
+  position: relative;
+  perspective: 500px; /* Adds 3D depth to text */
+}
+
+/* Footer Name (Left) */
+.footer-name {
+  font-size: 14px;
+  margin: 0;
+  color: #E0E0E0;
+  text-align: left;
+  position: relative;
+  padding-right: 10px;
+  text-shadow: 
+    1px 1px 2px rgba(0, 0, 0, 0.5), /* Base depth */
+    2px 2px 4px rgba(0, 0, 0, 0.4), /* Mid shadow */
+    3px 3px 6px rgba(0, 0, 0, 0.3), /* Deep shadow */
+    0 0 5px rgba(0, 224, 255, 0.5); /* Neon Blue glow */
+  transform: rotateX(10deg); /* Slight 3D tilt */
+  transition: transform 0.3s ease, text-shadow 0.3s ease;
+}
+
+
+
+/* Vertical Line After Name */
+.footer-name:after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 2px;
+  height: 16px;
+  background: #00E0FF;
+  box-shadow: 0 0 5px rgba(0, 224, 255, 0.5);
+}
+
+/* Footer Rights (Centered) */
+.footer-rights {
+  font-size: 14px;
+  margin: 5px 0 0;
+  color: #E0E0E0;
+  
+  width: 100%;
+  position: relative;
+  padding: 0 15px;
+  text-shadow: 
+    1px 1px 2px rgba(0, 0, 0, 0.5), 
+    2px 2px 4px rgba(0, 0, 0, 0.4), 
+    3px 3px 6px rgba(0, 0, 0, 0.3), 
+    0 0 5px rgba(0, 224, 255, 0.5);
+  transform: rotateX(10deg)
+  translateX(200px);
+  transition: transform 0.3s ease, text-shadow 0.3s ease;
+}
+
+
+
+/* Vertical Line Before Rights */
+.footer-rights:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%)
+  translateX(110px);
+  width: 2px;
+  height: 16px;
+  background: #00E0FF;
+  box-shadow: 0 0 5px rgba(0, 224, 255, 0.5);
+}
+
+/* Vertical Line After Rights */
+.footer-rights:after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%)
+  translateX(-110px);
+  width: 2px;
+  height: 16px;
+  background: #00E0FF;
+  box-shadow: 0 0 5px rgba(0, 224, 255, 0.5);
+}
+
+/* Footer Right */
+.footer-right {
+  position: relative;
+  padding-left: 15px;
+}
+
+/* Vertical Line Before Icons */
+.footer-right:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 2px;
+  height: 20px;
+  background: #00E0FF;
+  box-shadow: 0 0 5px rgba(0, 224, 255, 0.5);
+}
+
+.footer-right .footer-socials {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 15px;
+}
+
+.footer-socials li a {
+  color: #fff;
+  font-size: 18px;
+  text-decoration: none;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.footer-socials li a:hover {
+  color: #00E0FF;
+  text-shadow: 0 0 5px rgba(0, 224, 255, 0.6);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-left {
+    width: 100%;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+
+  .footer-name {
+    text-align: center;
+    padding-right: 0;
+  }
+
+  .footer-name:after {
+    display: none;
+  }
+
+  .footer-rights {
+    padding: 0;
+  }
+
+  .footer-rights:before, .footer-rights:after {
+    display: none;
+  }
+
+  .footer-right {
+    padding-left: 0;
+  }
+
+  .footer-right:before {
+    display: none;
+  }
+
+  .footer-right .footer-socials {
+    justify-content: center;
+  }
+}
+
+/*Main style(styling)*/
+
+/*header-text*/
+#left-white{
+   font-size: 24px;
+  font-weight: bold;
+  color: white;
+  text-shadow: 
+    2px 2px 0 #aaa, 
+    4px 4px 0 #888, 
+    6px 6px 0 #555, 
+    8px 8px 0 #222;
+  transform: perspective(500px) rotateX(15deg);
+
+}
+
+#left-white {
+  font-size: 24px;
+  font-weight: bold;
+  text-transform: uppercase;
+  background: linear-gradient(to right, #ffffff, #00E0FF);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 10px #00E0FF;
+  transform: perspective(500px) rotateX(10deg);
+  animation: flicker 1.5s infinite alternate;
+}
+
+#right-neon {
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+   background: linear-gradient(to right, #ffffff, #00E0FF);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  text-shadow: 0 0 10px #00E0FF, 0 0 20px #00E0FF;
+  animation: flicker 1.5s infinite alternate;
+  transform: translateY(60px);
+}
+
+/*name-logo anim*/
+
+/* Text & Logo */
+/* General Styling */
+
+
+/* Text & Logo */
+.text-container, .header-logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: opacity 0.5s ease-in-out;
+}
+
+.text-container {
+    opacity: 1; /* Start visible */
+}
+
+.header-logo {
+    width: 120px; /* Adjust as needed */
+    opacity: 0; /* Start hidden */
+}
+
+
+.header-logo{
+  width: 150px; /* Set the size */
+  height: 150px; /* Ensure it's a perfect square */
+  border-radius: 50%; /* Makes it a circle */
+  object-fit: cover; /* Ensures the image fills the circle */
+
+}
+
+.header-logo{
+  transform: translateX(-450px)
+  translateY(-20px);
+}
+
+.text-container{
+  transform: translateX(-450px)
+  translateY(-100px);
+}
+
+/*Header-question thing*/
+/* Container styling */
+.container-text {
+  position: relative;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 40px;
+  text-align: right;
+  font-family: Arial, sans-serif;
+  color: #333;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  transform: translateY(50px) translateX(100px);
+}
+
+/* Text box with a border on the right side */
+.text-box {
+  padding: 20px;
+  border: 2px solid #444444;
+  border-radius: 8px;
+  max-width: 400px; /* Fixed width for wrapping */
+  width: 100%;
+  box-sizing: border-box;
+  text-align: right;
+}
+
+/* Fade-in effect for question text */
+.fade-in-text {
+  opacity: 0;
+  font-size: 1.2em;
+  transition: opacity 2s ease-in;
+  color: white;
+}
+
+/* Typing effect for answer text */
+.typing-text {
+  display: block; /* Changed from inline-block to block for wrapping */
+  opacity: 0;
+  font-size: 1em;
+  color: #E0E0E0;
+  width: 100%; /* Full width of text-box */
+  border-right: 2px solid #000; /* Cursor effect */
+  transition: opacity 1s ease-in 1s;
+  text-align: right;
+  white-space: normal; /* Allow wrapping */
+  overflow-wrap: break-word; /* Break long words if needed */
+}
+
